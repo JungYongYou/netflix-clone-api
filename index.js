@@ -11,6 +11,8 @@ mongoose
 	.then(() => console.log('DB Connection Success!'))
 	.catch((err) => console.log(err));
 
+app.use(express.json());
+
 app.use('/api/auth', authRoute);
 
 app.listen(8800, () => {
